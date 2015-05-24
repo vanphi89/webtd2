@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{%block title%}
+     Hồ sơ của {{userpostt.name}}
+{%endblock%}
+{%block users_detail%}
+<div class="home_div">
+    
+    
+     <div class="home_search">
+        <form id="searchform" method="get" action="/hire/users/search/">
+            <label >Ngành nghề:</label>
+            {{form.category}}
+            <label >Địa điểm:</label>  
+            {{form.localwork}} 
+            <input type="submit" value="Tìm kiếm" />    
+        </form>
+     </div>
+    
+    <div class="users">
+        <a href="/hire/post/">Đăng tuyển</a>
+    </div>
+</div>
+<div class="jobs_detail">
+     <div class="first_div_users">
+          {{userpostt.image}}<br>
+          <label></label><p class= "users_name">{{userpostt.name}}<br></p>
+          <label>Ngày sinh: </label>{{userpostt.birthday}}<br>
+          <label>Số điện thoại:</label>{{userpostt.phone}}<br>
+          <label>Mail: </label>{{userpostt.email}}<br>
+          <label>Facebook: </label>{{userpostt.facebook}}<br>
+           <label>Địa chỉ: </label>{{userpostt.localwork}}<br>
+     </div>
+     <div class="second_div_users">
+          <label>Giới tính: </label>{{userpostt.sex}}<br>
+          <label>Hôn nhân: </label>{{userpostt.married}}<br>
+          <label>Ngành nghề: </label>{{userpostt.category}}<br>
+         
+          <label>Mức lương mong muốn: </label>{{userpostt.salary}}<br>
+          <label>Bằng cấp: </label>{{userpostt.degree}}<br>
+          <label>Năm kinh nghiệm: </label>{{userpostt.exp_year}}<br>
+          <label>Chi tiết: </label>{{userpostt.detail}}<br>
+          <label>Kỹ năng: </label>{{userpostt.skill}}<br>
+          
+          
+          <label>Người tham khảo: </label>{{userpostt.referencer}}<br>
+          <label>Ngày đăng: </label>{{userpostt.publication_date}}<br>
+     </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{%block title%}
+       Đăng tin tuyển dụng
+{%endblock%}
+{%block post%}
+<div class="post_div"> 
+       <form id="postform" method="post" action="/hire/post/">
+              {% csrf_token %}
+              <table>
+              {{ form.as_table }}
+              </table>
+              <div class="submit_div">
+              <input type="submit" value="Đăng tuyển" />
+              </div>
+       </form>
+</div> 
+{%endblock%}       
+      
+

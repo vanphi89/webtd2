@@ -1,0 +1,11 @@
+
+{% if user.is_authenticated %}
+    
+  
+    <a href="/accounts/">My account</a>
+    <a href="/accounts/logout/">Đăng xuất</a>
+{% else %}
+    <a href="/accounts/register/">Đăng ký</a>
+    <a href="/accounts/login/">Đăng nhập</a>
+    
+{% endif %}

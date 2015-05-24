@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+
+
+{%block title%}
+     Danh sách việc làm toàn quốc
+{%endblock%}
+{%block job_list%}
+{%load paginator %}
+<div class="home_div">
+    
+    
+     <div class="home_search">
+        <form id="searchform" method="get" action="/hire/jobs/search/">
+            <label >Ngành nghề:</label>
+            {{form.category}}
+            <label >Địa điểm:</label>  
+            {{form.localwork}} 
+            <input type="submit" value="Tìm kiếm" />    
+        </form>
+     </div>
+    
+    <div class="users">
+        <a href="/hire/userpost/">Tạo hồ sơ ứng tuyển</a>
+    </div>
+</div>
+<div class="jobs_paginator">
+                    {% for i in hire_article_s %}
+                    
+                                        <div class="home_li">
+                                        
+                                                            <div class="first_div">
+                                                            <a href="/hire/jobs/{{ i.slug }}-{{i.id}}">{{ i.hiring|capfirst}}</a>
+                                                            <p>{{ i.namecompany}}</p>
+                                                            
+                                                            
+                                                            <p>{{ i.salary}}</p><hr>
+                                                            </div>
+                                                            <div class="second_div">
+                                                            
+                                                            <p>{{ i.category}}</p>
+                                                            <p>{{ i.localwork}}</p>
+                                                            <p>{{ i.publication_date}}</p>
+                                                            </div>
+                                        </div>
+                    {% endfor %}
+                    <div class="list_paginator_number">
+                                        {% if hire_article_s.has_previous %}
+                                        <a href="?page=1">first</a>
+                                        <a href="?page={{ hire_article_s.previous_page_number }}">prev</a>
+                                        {% endif %}
+                                        
+                                        {% for page in hire_article_s.paginator.page_range|page_filter:hire_article_s.number %}
+                                        {% ifequal page page.number %}
+                                        <!-- Do something special for this page -->
+                                        <span id="currentpage">page</span>
+                                        {% else %}
+                                        <!-- All the other pages -->
+                                        {% endifequal %}
+                                        {% if page == hire_article_s.number %}
+                                        {{ page }}
+                                        {% else %}
+                                        <a href="/hire/jobs/?page={{ page }}">{{ page }}</a>
+                                        {% endif %}
+                                        {% endfor %}
+                                        
+                                        {% if hire_article_s.has_next %}
+                                        <a href="?page={{ hire_article_s.next_page_number }}">next</a>
+                                        <a href="?page={{ hire_article_s.paginator.num_pages}}">last</a>
+                                        {% endif %}
+                    </div>
+                  
+</div>
+{%endblock%}

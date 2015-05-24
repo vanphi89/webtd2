@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block title%}
+                Tạo hồ sơ
+{%endblock%}
+{%block userpost%}
+<div class="post_div"> 
+<form id="postform" method="post" action="/hire/userpost/">
+                {% csrf_token %}
+                <table>
+                {{ form.as_table }}
+                </table>
+                <div class="submit_div">
+                <input type="submit" value="Đăng hồ sơ" />
+                </div>
+</div>
+{%endblock%}

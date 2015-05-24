@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block title%}
+     Trang web tuyển dụng miễn phí hàng đầu VIệt Nam
+{%endblock%}
+{%block slider%}
+
+<div class="slider">
+     <div class="slider-wrapper theme-default">
+     
+          <div id="slider" class="nivoSlider">
+          
+               <img src="{% static "images/banner/banner.jpg" %}" height="400"  width = "100%" alt="" />
+               <img src="{% static "images/banner/banner1.jpg" %}" height="400"  width = "100%" alt="" />
+               <img src="{% static "images/banner/banner5.png" %}" height="400"  width = "100%" alt="" />
+               <img src="{% static "images/banner/banner3.jpg" %}" height="400"  width = "100%" alt="" />
+               <img src="{% static "images/banner/banner2.jpg" %}" height="400"  width = "100%" alt="" />
+               <img src="{% static "images/banner/banner4.jpg" %}" height="400"  width = "100%" alt="" />
+          </div>
+     </div>
+</div>
+
+{%endblock%}
+
+{%block home%}
+
+
+
+
+
+<div class="home_div">
+    
+    
+     <div class="home_search">
+        <form id="searchform" method="get" action="/hire/jobs/search/">
+            <label >Ngành nghề:</label>
+            {{form.category}}
+            <label >Địa điểm:</label>  
+            {{form.localwork}} 
+            <input type="submit" value="Tìm kiếm" />    
+        </form>
+     </div>
+    <div class="companys">
+        <a href="/hire/post/">Đăng tuyển</a>
+    </div>
+    <div class="users">
+        <a href="/hire/userpost/">Tạo hồ sơ ứng tuyển</a>
+    </div>
+</div>
+
+
+<div class="home_list">
+     <div class="home_list_div1">
+         <p><strong>Bạn muốn tìm việc ở thành phố?</strong></p><br>
+         <div class="list_div1">
+               {% for i in list_city1 %}
+                    <a href="/hire/locals/{{ i.slug }}">{{ i.localwork }}</a><br>
+               {%endfor%}
+          </div>
+         <div class="list_div1">
+               {% for i in list_city2 %}
+                    <a href="/hire/locals/{{ i.slug }}">{{ i.localwork }}</a><br>
+               {%endfor%}
+          </div>
+          <div class="list_div1">
+               {% for i in list_city3 %}
+                    <a href="/hire/locals/{{ i.slug }}">{{ i.localwork }}</a><br>
+               {%endfor%}
+          </div>
+     </div>
+     
+     
+     
+     <div class="home_list_div2">
+          
+              <ul>
+                  {% for i in hire_article_list %}
+                      <div class="home_li">
+                          
+                          <div class="first_div">
+                              <a href="/hire/jobs/{{ i.slug }}-{{i.id}}">{{ i.hiring|capfirst}}</a>
+                              <p>{{ i.namecompany}}</p>
+                              
+                              
+                              <p>{{ i.salary}}</p><hr>
+                          </div>
+                          <div class="second_div">
+                             
+                              <p>{{ i.category}}</p>
+                              <p>{{ i.localwork}}</p>
+                              <p>{{ i.publication_date}}</p>
+                          </div>
+                      </div>
+                  {% endfor %}
+                  
+              </ul>
+             
+          
+  
+     </div>
+
+</div>       
+{%endblock%}

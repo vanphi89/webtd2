@@ -1,0 +1,416 @@
+*{
+padding: 0px;
+margin: 0px;
+}
+html, body {
+	background-color: #ffffff;
+	color: #000305;
+	font-size: 87.5%; /* Base font size: 14px */
+	font-family: "Varela Round", Arial, Helvetica, sans-serif;
+	line-height: 1.429;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+	height: auto;
+	width: 100%;
+	
+}
+	
+h2 {font-size: 1.571em}	/* 22px */
+h3 {font-size: 1.429em}	/* 20px */
+h4 {font-size: 1.286em}	/* 18px */
+h5 {font-size: 1.143em}	/* 16px */
+h6 {font-size: 1em}		/* 14px */
+
+a:link {
+	color: #000000;
+	padding: 0 1px;
+	text-decoration: none;
+}
+
+a:hover, a:active, a:visited, {
+	
+	color:  #8c4600;
+	text-decoration: none;
+}
+
+
+#mainheader {
+	background: #666;
+	font-size: 1.143em;
+	height: 40px;
+	line-height: 30px;
+	margin: 0 auto 0% auto;
+	text-align: center;
+	border-radius: 0px;
+		
+}
+	
+li {
+	list-style: none;
+	margin: auto;
+}
+
+nav ul li {
+	display: inline; 
+}
+	
+nav ul li a:link {
+	color: white;
+	display: inline-block;
+	padding: 5px 23px;
+	
+	
+}
+nav a:hover, nav a:active {
+	color: #fff;
+	background: #9797ff;
+	
+	
+}
+
+#first-nav{
+	float: left;
+}
+#second-nav{
+	float: right;
+	
+}
+
+nav li a {
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+}
+
+
+#adv{
+	clear: both;
+	text-align: center;
+	height:200px;
+	width: auto;
+	background: #9797ff; 
+}
+
+.about{
+	
+	padding:  30px;
+	font-size: medium;
+}
+
+.aside1{
+	width: 20%;
+	float: left;
+	background: blue;
+}
+.home_main{
+	width: 60%;
+	float: left;
+	background: #ff80c0
+	
+}
+.aside2{
+	width: 20px;
+	float: left;
+	background: #00ff80
+}
+
+
+
+
+.home_main_div{
+height: 20px;
+padding: 6px 12px 12px 12px;
+background: #2dbbff;
+font-size: large;
+
+	
+}
+.searchform{
+	float: left;
+	color: white;
+	width: 50%;
+}
+.foruser{
+	float: left;
+	background: #ff7b3c;
+	margin-right: 350px;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+
+}
+.forcompany{
+	float: right;
+	background: #ff7b3c;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	
+}
+.foruser a{
+	color: white;
+}
+.forcompany a{
+	color: white;
+}
+hr{
+	color: #dbdbdb;
+}
+.hire_article_list{
+	c.hire_article_listlear: both;
+	margin-top: 150px;
+	font-size: medium;
+}
+.home_li:hover{
+	background: #e0e0e0;
+}
+.home_li li{
+	display: inline-block;
+}
+.home_div{
+	clear: both;
+	margin-bottom: 500px;
+	text-align: left;
+}
+
+.first_div{
+	float: left;
+	margin-right: 200px;
+}
+.second_div{
+	background: #e0e0e0;
+}
+
+
+/*search css*/
+.searchform input[type="submit"]{
+	background: #4e9a9a;
+	color: white;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+}
+
+.foruser:hover, .forcompany:hover{
+	background: #cc6600;
+}
+.searchform input[type="submit"]:hover{
+	background: #397171;
+}
+
+.first_li p{
+	text-align: left;
+}
+
+
+
+#mainfooter {
+	width: 100%;
+	
+	
+	position: !important;
+	text-align: center;
+	float: left;
+	background-color: #666;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;	
+	color: #FFF;	
+}
+
+#mainfooter p {
+	
+	margin: 2% ;
+}
+
+#thankyou-register-div{
+	
+	font-size: 18px;
+	margin: 100px auto;
+}
+#thankyou-register p{
+	text-align: center;
+}
+
+
+
+
+
+
+/* CSS for cellphone and tap____________________________________________________________ */
+/* CSS for cellphone and tap____________________________________________________________ */
+/* CSS for cellphone and tap____________________________________________________________ */
+
+
+@media only screen and (min-width : 150px) and (max-width : 780px)
+{
+	.body {
+		clear: both; 
+		margin: 0 auto; 
+		width: 90%;
+		font-size: 90%;
+	}
+	
+	 nav {
+		background: #666;
+		font-size: 1.143em;
+		height: 287px;
+		line-height: 30px;
+		margin-bottom: 0;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+		
+	nav ul {
+		list-style: none; 
+		margin: 0 auto;
+		padding-left: 0;
+	}
+	
+	nav li {
+		margin-left: 0 auto;
+		width: 100%;
+	}
+	
+	nav a:link, nav a:visited {
+		color: #FFF;
+		display: block;
+		height: 30px;
+		padding: 5px 0;
+		text-decoration: none;
+	}
+	
+	nav a:active,
+	 nav .active a:link,  nav .active a:visited {
+		background: #CF5C3F;
+		color: #fff;
+		text-shadow: none !important;
+	}
+		
+	nav li a {
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+			
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+	}
+	
+	#mainheader img {
+		width: 100%;
+		height: auto;
+		margin-bottom: 3%;
+	}
+	
+	#mainsection {
+		overflow: hidden;
+		line-height: 25px;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;
+		margin-top: 4%;
+		margin-bottom: 2%;
+	}
+	
+	.topcontent {
+		background-color: #FFF;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+		padding: 2% 5%;
+		margin-bottom: 4%;
+	}
+	
+	.bottomcontent {
+		background-color: #FFF;	
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+		padding: 2% 5%;
+	}
+	
+	.content {
+		width: 100%;
+		float: left;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+	}	
+
+	.post-info {
+		display: none;
+	}
+	
+	.top-sidebar {
+		width: 86%;
+		float: left;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+		background-color: #7777ff;	
+		margin-top: 4%;
+		margin-left: 0;
+		padding: 0 7%;
+		margin-bottom: 0;		
+	}
+	
+	.top-sidebar p {
+		width: 90%;
+	}
+
+	.middle-sidebar {
+		width: 86%;
+		float: left;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+		background-color: #7777ff;	
+		margin-top: 4%;
+		margin-left: 0;
+		padding: 0 7%;
+		margin-bottom: 0;	
+	}
+	
+	.middle-sidebar p {
+		width: 90%;
+	}
+	
+	.bottom-sidebar {
+		width: 86%;
+		height: 50%;
+		float: left;
+		border-radius: 5px;
+		-moz-border-radius: 5px;
+		-webkit-border-radius: 5px;	
+		background-color:#7777ff;	
+		margin-top: 4%;
+		margin-left: 0%;
+		padding: 0 7%;
+		margin-bottom: 1%;
+	}
+	
+	.bottom-sidebar p {
+		width: 90%;
+	}
+		
+	#mainfooter {
+		width: 100%;
+		float: left;
+		margin: auto;
+		padding-left: 0;
+		background-color: #666;
+		border-radius: 0px;
+		-moz-border-radius: 0px;
+		-webkit-border-radius: 0px;	
+		color: #FFF;	
+	}
+	
+	#mainfooter p {
+		width: 86%;
+		margin: 2% auto;
+	}
+}

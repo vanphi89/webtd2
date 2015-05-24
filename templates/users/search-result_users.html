@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+
+{%block title%}
+     Kết quả tìm kiếm nhân viên
+{%endblock%}
+{%load paginator %}
+{%block search-result_user%}
+
+<div class="home_div">
+    
+    
+     <div class="home_search">
+        <form id="searchform" method="get" action="/hire/users/search/">
+            <label >Ngành nghề:</label>
+            {{form.category}}
+            <label >Địa điểm:</label>  
+            {{form.localwork}} 
+            <input type="submit" value="Tìm kiếm" />    
+        </form>
+     </div>
+    
+    <div class="users">
+        <a href="/hire/post/">Đăng tuyển</a>
+    </div>
+</div>
+
+ 
+   
+      
+<div class="jobs_paginator">
+                    {% for j in userlist_s %}
+                    <div class="home_li">
+                                        <div class="first_div">
+                                                            {# Each "j" is a page_list  model object. #}
+                                                            <a href="/hire/users/{{ j.slug }}-{{j.id}}">{{ j.name|capfirst}}</a>
+                                                             <p>{{ j.degree}}</p>
+                                                             <p>{{j.exp_year}}</p>
+                                        </div>
+                                        <div class="second_div">
+                                                            <p>{{ j.category}}</p>
+                                                            <p>{{ j.localwork}}</p>
+                                                            <p>{{ j.publication_date}}</p>
+                                        </div>
+                    </div>
+                    {% endfor %}
+                    <div class="list_paginator_number">
+                                        
+                                        <span class="step-links">
+                                        {% if userlist_s.has_previous %}
+                                        <a href="?page=1">first</a>
+                                        <a href="?page={{ userlist_s.previous_page_number }}">prev</a>
+                                        {% endif %}
+                                        
+                                        {% for page in userlist_s.paginator.page_range|page_filter:userlist_s.number %}
+                                                            {% ifequal page page.number %}
+                                                            <!-- Do something special for this page -->
+                                                            <span id="currentpage">page</span>
+                                                            {% else %}
+                                                            <!-- All the other pages -->
+                                                            {% endifequal %}
+                                                            {% if page == userlist_s.number %}
+                                                            {{ page }}
+                                                            {% else %}
+                                                            <a href="/hire/users/?page={{ page }}">{{ page }}</a>
+                                                            {% endif %}
+                                        {% endfor %}
+                                        
+                                        {% if userlist_s.has_next %}
+                                        <a href="?page={{ userlist_s.next_page_number }}">next</a>
+                                        <a href="?page={{ userlist_s.paginator.num_pages}}">last</a>
+                                        {% endif %}
+                                        </span>
+                    </div>
+ 
+</div>
+          
+     
+</div>
+{%endblock%}

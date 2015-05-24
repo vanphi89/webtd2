@@ -1,0 +1,7 @@
+
+    <form id="form" method="post" action="/accounts/register/" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{form.username.errors}}
+         {{form.email.errors}}
+        {{form}}
+        <input type="submit" value="Đăng ký" />

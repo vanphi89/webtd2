@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+
+
+{%block title%}
+     {{hire_article.hiring}}
+{%endblock%}
+{%block job_detail%}
+<div class="home_div">
+    
+    
+     <div class="home_search">
+        <form id="searchform" method="get" action="/hire/search/">
+            <label >Ngành nghề:</label>
+            {{form.category}}
+            <label >Địa điểm:</label>  
+            {{form.localwork}} 
+            <input type="submit" value="Tìm kiếm" />    
+        </form>
+     </div>
+    
+    <div class="users">
+        <a href="/hire/userpost/">Tạo hồ sơ ứng tuyển</a>
+    </div>
+</div>
+<div class="jobs_detail">
+     <div class="first_div_users">
+          <p class="users_name">{{hire_article.hiring}}<br></p>
+          
+          <label>Ngành nghề: </label></lable>{{hire_article.category}}<br>
+          <label>Dia diem: </label></lable>{{hire_article.localwork}}<br>
+          <label>Mức lương: </label></label>{{hire_article.salary}}<br>
+          <label>Kinh nghiệm: </label>{{hire_article.exp_year}}<br>
+          <label>Trình độ: </label>{{hire_article.degree}}<br>
+          <label>Giới tính: </label>{{hire_article.sex }}<br>
+          <label>Ngoại ngữ: </label>{{hire_article.language}}<br>
+          <label>Yêu cầu thêm: </label>{{hire_article.more_require}}<br>
+          <label>Quyền lợi: </label>{{hire_article.benefit}}<br>
+          <label>Hồ sơ gồm: </label>{{hire_article.document}}<br>
+          <label>Số lượng: </label>{{hire_article.number}}<br>
+          <label>Chế độ làm việc: </label>{{hire_article.mode_work}}<br>
+          <label>Hạn nộp: </label>{{hire_article.timeover}}<br>
+          <label>Nộp qua: </label>{{hire_article.applymode}}<br>
+          
+     </div>
+     <div class="second_div_users">
+          <label>Tên công ty: </label>{{hire_article.namecompany}}<br>
+          <label>Mail: </label>{{hire_article.email}}<br>
+          <label>Website: </label>{{hire_article.website}}<br>
+          <label>Thông tin về công ty: </label>{{hire_article.infomation}}<br>
+          <label>Ngày đăng tuyển: </label>{{hire_article.publication_date}}<br>
+          
+     </div>
+</div>
+
+{%endblock%}

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+{% load static %}
+<!--{% load staticfiles %}-->
+<html lang="en">
+<head>
+	<title>Vieclam3s.com- {%block title%}{%endblock%}</title>
+	<link href="/static/images/favicon.ico" rel="icon" type="image/x-icon" />
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<!--<link rel="stylesheet" href="{% static "css/body.css" %}">-->
+    <link rel="stylesheet" href="{% static "css/about.css" %}">
+	<link rel="stylesheet" href="{% static "css/account.css" %}">
+	<link rel="stylesheet" href="{% static "css/slider.css" %}">
+	
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!--<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    
+    <!--slider-->
+   <!-- <link href="css/slider.css" rel="stylesheet" type="text/css" media="all"/>-->
+    <script type="text/javascript" src="static/js/jquery-1.9.0.min.js"></script>
+    <script type="text/javascript" src="static/js/jquery.nivo.slider.js"></script>
+    <script type="text/javascript">
+    $(window).load(function() {
+        $('#slider').nivoSlider();
+    });
+    </script>
+</head>    
+<body>
+    <div>
+        <div id="header">
+			<header>
+				<nav>
+					<ul>
+					<div id="first_nav">	
+					<li ><a href="/">Trang chủ</a></li>
+					<li ><a href="/hire/jobs">Tìm việc</a></li>
+					<li ><a href="/hire/users">Tuyển dụng</a></li>
+					<li ><a href="/hire/documents">Tài liệu</a></li>
+					<li ><a href="/hire/about">About</a></li>
+					</div>
+					<div id="second_nav">
+					<li ><a href="#">Tìm kiếm</a></li>
+					<li >{% include "accounts/account.html" %}</li>
+					</div>
+					</ul>
+				</nav>
+			</header>
+        </div>
+        
+		<!------ Slider ------------>
+		
+<!--        <div class="slider">-->
+<!--			<div class="slider-wrapper theme-default">-->
+<!--				-->
+<!--					<div id="slider" class="nivoSlider">-->
+<!--						-->
+<!--						<img src="{% static "images/banner/banner.jpg" %}" height="400"  width = "100%" alt="" />-->
+<!--						<img src="{% static "images/banner/banner1.jpg" %}" height="400"  width = "100%" alt="" />-->
+<!--						<img src="{% static "images/banner/banner5.png" %}" height="400"  width = "100%" alt="" />-->
+<!--						<img src="{% static "images/banner/banner3.jpg" %}" height="400"  width = "100%" alt="" />-->
+<!--						<img src="{% static "images/banner/banner2.jpg" %}" height="400"  width = "100%" alt="" />-->
+<!--						<img src="{% static "images/banner/banner4.jpg" %}" height="400"  width = "100%" alt="" />-->
+<!--					</div>-->
+<!--			</div>-->
+<!--        </div>-->
+
+<!--		Set debug = False to active slider-->
+		 <!------End Slider ------------>
+		{%block slider%}{%endblock%}
+		
+		<div class="aside1">
+			<aside>Liên hệ để đặt quảng cáo</aside>
+		</div>
+		
+		<div class="section">
+			<section>
+				{% block about%}{% endblock %}
+				
+				{% block signin %}{% endblock %}
+				{% block signup %}{% endblock %}
+				{% block view_account %}{% endblock %}
+				{% block password_reset %}{% endblock %}
+				{% block password_change %}{% endblock %}
+				
+				{% block documents %}{% endblock %}
+				{% block get_documents_detail %}{% endblock %}
+				
+				{%block home%}{%endblock%}
+				
+				{%block post%}{%endblock%}
+				{%block job_list%}{%endblock%}
+				{%block job_detail%}{%endblock%}
+				{%block search-result.html%}{%endblock%}
+				
+				
+				{%block userpost%}{%endblock%}
+				{%block users_list%}{%endblock%}
+				{%block search-result_user%}{%endblock%}
+				{%block users_detail%}{%endblock%}
+				
+				{%block thank%}{%endblock%}
+			</section>
+		</div>
+		
+		<div class="aside2">
+			<aside>Liên hệ để đặt quảng cáo</aside>
+		</div>
+        
+		
+		<div>
+			<footer id="footer">
+				<p>Copyright &copy; 2015 <a href="#">Trang web đang xin giấy phép mạng xã hội</a></p>
+			</footer>
+		</div>
+	</div>
+</body>
+</html>

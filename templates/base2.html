@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+{% load static %}
+
+<html lang="en">
+<head>
+	<title>Tìm việc làm {%block title%}{%endblock%}</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" href="{% static "css/style.css" %}">
+	<link rel="stylesheet" href="{% static "css/body.css" %}">
+    <link rel="stylesheet" href="{% static "css/about.css" %}">
+	<link rel="stylesheet" href="{% static "css/account.css" %}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>    
+<body>
+    <div>
+        <div id="mainheader">
+        <header>
+            <nav>
+                <ul>
+				<div id="first-nav">	
+                <li ><a href="/"><span class="icon-headphones"></span>Trang chủ</a></li>
+                <li ><a href="/hire/jobs">Tìm việc</a></li>
+                <li ><a href="/hire/users">Tuyển dụng</a></li>
+                <li ><a href="/hire/documents">Tài liệu</a></li>
+                <li ><a href="/hire/about">About</a></li>
+                </div>
+				<div id="second-nav">
+				<li ><a href="#">Tìm kiếm</a></li>
+                <li >{% include "accounts/account.html" %}</li>
+				</div>
+                </ul>
+            </nav>
+        </header>
+        </div>
+        
+		<div id="adv">
+			 <p>THis is for advertisement</p>
+			 <img src="advertisement.jpg" alt=""/>
+		</div>
+		
+		<div>
+			<aside>Aside1</aside>
+		</div>
+		<div id="mainsection">
+				<section>
+					<article>
+						{% block about %}{% endblock %}
+					</article>
+					<article>
+						{% block view_account %}{% endblock %}
+					</article>
+					<article >
+						{% block signin %}{% endblock %}
+					</article>
+					<article>
+						{% block signup %}{% endblock %}
+					</article>
+					<article >
+						{% block password_reset %}{% endblock %}
+					</article>
+					<article >
+						{% block password_change %}{% endblock %}
+					</article>
+				
+					<article >
+						{%block post%}{% endblock %}
+					</article>
+					<article >
+						{% block home %}{% endblock %}
+					</article>
+				</section>
+		<div>
+			<aside>Aside2</aside>
+		</div>
+        
+		</div>	
+	<div>
+	<footer id="mainfooter">
+		<p>Copyright &copy; 2015 <a href="#">Trang web đang xin giấy phép mạng xã hội</a></p>
+	</footer>
+	</div>
+   
+</body>
+</html>

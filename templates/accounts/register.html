@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block signup %}
+    
+    
+    <div id="signup">
+        <h2><span class="fontawesome-lock"></span>Sign up</h2>
+        <fieldset>
+            <form id="form" method="post" action="/accounts/register/" enctype="multipart/form-data">
+                
+                {% csrf_token %}
+            
+               {{form.username.errors}}
+                <p><label for="text">Tên đăng nhập:</label></p>
+                <p><input type="text" name="username" maxlength=100, required=true>
+                {{form.email.errors}}
+                               
+                <p><label for="id_text">Địa chỉ mail:</label></p>
+                <p><input type="email" name="email" maxlength=100, id="id_email", required=true  >
+                <p><label for="password">Mật khẩu:</label></p>
+                <p><input type="password" name="password" maxlength=100, required=true>
+                <input type="submit" value="Đăng ký" />
+                
+            </form>
+             
+                
+          
+            <p>Đăng ký nghĩa là bạn đã đồng ý <a id="forgetpass" href='/about'>điều khoản</a> của chúng tôi!</p>
+        </fieldset>
+    
+    </div>
+
+{% endblock %} 

@@ -1,0 +1,104 @@
+input {
+	border: none;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	-webkit-appearance: none;
+}
+
+/* ---------- LOGIN ---------- */
+
+#login, #signup {
+	margin: auto;
+    text-align: center;
+    margin-bottom: 200px;
+	width: 550px;
+    
+}
+
+#login h2, #signup h2 {
+	background-color: #c7c7e2;
+	-webkit-border-radius: 20px 20px 0 0;
+	-moz-border-radius: 20px 20px 0 0;
+	border-radius: 20px 20px 0 0;
+	color: #fff;
+	font-size: 28px;
+	padding: 20px 26px;
+}
+
+
+#login fieldset, #signup fieldset {
+	background-color: #fff;
+	-webkit-border-radius: 0 0 20px 20px;
+	-moz-border-radius: 0 0 20px 20px;
+	border-radius: 0 0 20px 20px;
+	padding: 20px 26px;
+}
+
+#login fieldset p, #signup fieldset p {
+	color: #404040;
+	margin-bottom: 10px;
+    font-size: 16px;
+}
+
+/*#login fieldset p:last-child {
+	margin-bottom: 0;
+}*/
+
+#login fieldset input, #signup fieldset input {
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+
+#login fieldset input[type="text"], #login fieldset input[type="password"],
+#signup fieldset input[type="text"], #signup fieldset input[type="password"],
+#signup fieldset input[type="email"]{
+	background-color: #eee;
+	color: #777;
+	padding: 4px 10px;
+	width: 328px;
+}
+
+#login fieldset input[type="submit"], #signup fieldset input[type="submit"] {
+	background-color: #33cc77;
+	color: #fff;
+	display: block;
+	margin: 14px auto;
+	padding: 4px 0;
+	width: 100px;
+}
+
+#login fieldset input[type="submit"]:hover, #signup fieldset input[type="submit"]:hover {
+	background-color: #28ad63;
+}
+#forgetpass{
+    text-align: center;
+    color: black;
+}
+
+
+
+
+.view_account {
+	background:  #33cc77;
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+}
+.view_account a, .view_account2 a{
+	color: white;
+}
+.view_account2 {
+	background:  #409fff;
+	text-align: center;
+	margin: auto;
+	padding: 10px;
+}
+.view_account:hover{
+	background: #2cad66;
+}
+.view_account2:hover{
+	background: #007efd;
+}
